@@ -17,14 +17,22 @@ def input_students
   students
 end
 
-def print_header
-  puts "The students of my cohort at Makers Academy"
-  puts "-------------"
+def print_header(students)
+  if students.count == 0
+    puts ""
+  elsif students.count >= 1
+    puts "The students of my cohort at Makers Academy"
+    puts "-------------"
+  end
 end
 
 def print(students)
-  students.each do |student|
-    puts "#{student[:name]} (#{student[:cohort]} cohort)"
+  if students.count == 0
+    puts ""
+  elsif students.count >= 1
+    students.each do |student|
+      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    end
   end
 end
 
@@ -34,6 +42,6 @@ end
 
 
 students = input_students
-print_header
+print_header(students)
 print(students)
 print_footer(students)
