@@ -24,7 +24,9 @@ end
 def print(students)
     index_var = 0
     while index_var < students.length
-      puts "#{index_var + 1}. #{students[index_var][:name]} (#{students[index_var][:cohort]} cohort), birth: #{students[index_var][:birth]}, height: #{students[index_var][:height]}, hobby: #{students[index_var][:hobby]}"
+      puts "#{index_var + 1}. #{students[index_var][:name]} (#{students[index_var][:cohort]} cohort)"
+      puts "birth: #{students[index_var][:birth]}, height: #{students[index_var][:height]}".center(15)
+      puts "hobby: #{students[index_var][:hobby]}".center(30)
       index_var += 1
     end
 end
