@@ -5,9 +5,11 @@ def input_students
   students = []
   # get the first name
   puts "Please enter a name:"
-  name = gets.chomp
+  name = gets
+  name = name.strip
   puts "Please enter the cohort:"
-  cohort = gets.chomp
+  cohort = gets
+  cohort = cohort.strip
   # while the name is not empty, repeat this code
   while !name.empty? do
     # add the student hash to the array
@@ -19,9 +21,11 @@ def input_students
     end
     # get another name from the user
     puts "Please enter a name:"
-    name = gets.chomp
+    name = gets
+    name = name.strip
     puts "Please enter the cohort:"
-    cohort = gets.chomp
+    cohort = gets
+    cohort = cohort.strip
   end
   # return the array of students
   students
