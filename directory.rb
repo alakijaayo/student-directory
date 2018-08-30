@@ -27,6 +27,7 @@ def print_header
   puts "The students of Villains Academy"
   puts "-------------"
 end
+
 def print(students)
     index_var = 0
     while index_var < students.length
@@ -36,6 +37,19 @@ def print(students)
       index_var += 1
     end
 end
+
+def print_by_cohort(students)
+  cohorts = students.map{|x| x[:cohort]}.uniq
+  cohorts.each do |cohort|
+    puts cohort
+    students.each do |y|
+      if y[:cohort] == cohort
+        puts y[:name]
+      end
+    end
+  end
+end
+
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
 end
@@ -43,4 +57,5 @@ end
 students = input_students
 print_header
 print(students)
+print_by_cohort(students)
 print_footer(students)
