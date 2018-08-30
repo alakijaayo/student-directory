@@ -12,7 +12,11 @@ def input_students
   while !name.empty? do
     # add the student hash to the array
     students << {name: name, cohort: cohort, hobby: "Causing chaos", birth: "DOB", height: "6ft 3in"}
-    puts "Now we have #{students.count} students"
+    if students.count == 1
+      puts "Now we have #{students.count} student"
+    else
+      puts "Now we have #{students.count} students"
+    end
     # get another name from the user
     puts "Please enter a name:"
     name = gets.chomp
