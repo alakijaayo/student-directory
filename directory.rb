@@ -23,7 +23,7 @@ def print_header
 end
 def print(students)
   students.each_with_index do |student, index|
-    if student[:name].start_with?("T")
+    if student[:name].length < 12
     indexplusone = index + 1
     puts "#{indexplusone}. #{student[:name]} (#{student[:cohort]} cohort)"
     end
